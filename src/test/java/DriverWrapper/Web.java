@@ -2,9 +2,12 @@ package DriverWrapper;
 
 import org.junit.After;
 import org.junit.Before;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class Web {
@@ -23,11 +26,52 @@ public class Web {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(url);
 
-//        try {
-//            Thread.sleep(2000);     // 1 sec = 1000milliseconds
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            Thread.sleep(2000);     // 1 sec = 1000milliseconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        driver.findElement(By.xpath("//span[text()='Check in']")).click();
+
+        try {
+            Thread.sleep(1000);     // 1 sec = 1000milliseconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // #2, #3
+        List<WebElement> dates = driver.findElements(By.xpath("//h2[text()='October 2021']/following-sibling::table//button[not(@disabled)]"));
+
+        // #4
+        for (WebElement date : dates) {
+            if (date.getText().equalsIgnoreCase("10")) {
+                date.click();
+                break;
+            }
+        }
+
+        driver.findElement(By.xpath("//span[text()='Check out']")).click();
+
+        try {
+            Thread.sleep(1000);     // 1 sec = 1000milliseconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // #4
+        for (WebElement date : dates) {
+            if (date.getText().equalsIgnoreCase("17")) {
+                date.click();
+                break;
+            }
+        }
     }
 
     /**

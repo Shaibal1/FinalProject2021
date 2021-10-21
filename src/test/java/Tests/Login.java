@@ -24,6 +24,11 @@ public class Login extends Web {
         3. Quit webpage
      */
 
+
+
+
+
+
     @Test
     public void isLoginButtonEnabled() {
 
@@ -36,22 +41,22 @@ public class Login extends Web {
             verify it is enabled (isEnabled)
          */
 
-        Assert.assertTrue(homepage.isLoginEnabled(), "Login button is not enabled");
-
-        // 3. Quit webpage
-        quitWebpage();
-
-    }
-
-
-    @Test
-    public void invalidCredentials() {
-
-        openWebpage();
-
-        homepage.typeLoginEmail("abcd@gmail.com");
-        homepage.typeLoginPwd("abcd@1234");
-        homepage.clickLoginButton();
+//        Assert.assertTrue(homepage.isLoginEnabled(), "Login button is not enabled");
+//
+//        // 3. Quit webpage
+//        quitWebpage();
+//
+//    }
+//
+//
+//    @Test
+//    public void invalidCredentials() {
+//
+//        openWebpage();
+//
+//        homepage.typeLoginEmail("abcd@gmail.com");
+//        homepage.typeLoginPwd("abcd@1234");
+//        homepage.clickLoginButton();
 
         Assert.assertTrue(errorPage.isSomethingWrongErrorDisplayed(), "Error msg is NOT displayed");
     }

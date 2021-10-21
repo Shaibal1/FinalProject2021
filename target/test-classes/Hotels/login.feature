@@ -17,7 +17,7 @@ Feature: Login
 #  */
 
   Scenario: Verify error message when for incorrect username or password
-    Given I launch Facebook homepage
+    Given I launch hotels homepage
     When I enter 'abcd@gmail.com' in password
       And I enter 'abcd@1234'
       And I click login button

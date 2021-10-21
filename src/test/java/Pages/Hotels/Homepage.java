@@ -1,10 +1,7 @@
-package Hotels.com;
+package Pages.Hotels;
 
-//import Pages.WebCommands;
 import Pages.WebCommands;
 import org.openqa.selenium.By;
-
-
 
 public class Homepage extends WebCommands {
 

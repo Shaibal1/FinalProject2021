@@ -1,8 +1,8 @@
 package Tests;
 
 import DriverWrapper.Web;
-import Pages.FaceBook.ErrorPage;
-import Pages.FaceBook.Homepage;
+import Pages.Hotels.ErrorPage;
+import Pages.Hotels.Homepage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

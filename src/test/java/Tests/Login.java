@@ -1,67 +1,56 @@
-package Tests;
-
-import DriverWrapper.Web;
-import Pages.Hotels.ErrorPage;
-import Pages.Hotels.Homepage;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
-public class Login extends Web {
-
-    Homepage homepage = new Homepage();
-    ErrorPage errorPage = new ErrorPage();
-
-    /**
-     * 1. Create object of Web class
-     * 2. Extend Web Class
-     */
-
-
-    // Verify login button is enabled after launching the web-page
-    /*
-        1. Launch webpage
-        2. Verify Login button is enabled ()
-        3. Quit webpage
-     */
-
-
-
-
-
-
-    @Test
-    public void isLoginButtonEnabled() {
-
-        // 1. Launch webpage
-        openWebpage();
-
-        // 2. Verify Login button is enabled ()
-        /*
-            find login button
-            verify it is enabled (isEnabled)
-         */
-
-//        Assert.assertTrue(homepage.isLoginEnabled(), "Login button is not enabled");
+//package Tests;
 //
-//        // 3. Quit webpage
-//        quitWebpage();
+//import DriverWrapper.DriverWrapper;
+//import Pages.Hotels.HomePage;
+//import Pages.Hotels.HomePage;
+//import org.testng.Assert;
+//import org.testng.annotations.Test;
 //
-//    }
+//public class Login extends DriverWrapper {
+//
+////    Homepage homepage = new Homepage();
+////    ErrorPage errorPage = new ErrorPage();
+//
+//    DriverWrapper Open = new DriverWrapper();
+//    HomePage hp = new HomePage();
 //
 //
+//    /**
+//     * 1. Create object of Web class
+//     * 2. Extend Web Class
+//     */
+//
+//
+//    // Verify login button is enabled after launching the web-page
+//    /*
+//        1. Launch webpage
+//        2. Verify Login button is enabled ()
+//        3. Quit webpage
+//     */
+//
+//
+//
+//    // Verify incorrect username/password
+//    /*
+//        1. Launch WebPage
+//        2. Enter "abcd@gmail.com" in username
+//        3. Enter "abcd@1234" as password
+//        4. Click Login button
+//        5. User should be "Sorry, something went wrong." message
+//        6. Quit webpage
+//     */
 //    @Test
 //    public void invalidCredentials() {
 //
 //        openWebpage();
 //
-//        homepage.typeLoginEmail("abcd@gmail.com");
-//        homepage.typeLoginPwd("abcd@1234");
-//        homepage.clickLoginButton();
-
-        Assert.assertTrue(errorPage.isSomethingWrongErrorDisplayed(), "Error msg is NOT displayed");
-    }
-
-
-
-
-}
+//        hp.typeLoginEmail("abcd@gmail.com");
+//        hp.typeLoginPwd("abcd@1234");
+//        hp.clickSignInLink();
+//
+//
+//    }
+//
+//
+//
+//}
